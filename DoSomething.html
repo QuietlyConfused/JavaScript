@@ -1,0 +1,19 @@
+<html>
+<script>
+    size=10;
+    function doSomething(){
+        if (event.ctrlKey){
+            size+=1
+        }
+        if (event.altKey){
+            size-=1
+        }
+        s.style.top=event.clientY
+        s.style.left=event.clientX
+        s.style.fontSize=size
+    }
+</script>
+<body onMouseMove="doSomething()">
+    <span id="s" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color:blue;position:absolute;top:50;left:600">Stew</span>
+</body>
+</html>

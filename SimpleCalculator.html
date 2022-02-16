@@ -1,0 +1,68 @@
+<html>
+<script>
+    function Addition(){
+        if(txt1.value==""){
+            alert("The first number is missing")
+            txt1.focus()
+        }
+        else{
+                if(txt2.value==""){
+                    alert("The second number is missing")
+                    txt2.focus()
+                }else{
+                    txt3.value=parseInt(txt1.value)+parseInt(txt2.value);
+                }
+        }
+    }
+    function Subtraction(){
+        if(txt1.value==""){
+            alert("The first number is missing")
+            txt1.focus()
+        }
+        else{
+                if(txt2.value==""){
+                    alert("The second number is missing")
+                    txt2.focus()
+                }else{
+                    txt3.value=parseInt(txt1.value)-parseInt(txt2.value);
+                }
+        }
+    }
+    function Multiplication(){
+        if(txt1.value==""){
+            alert("The first number is missing")
+            txt1.focus()
+        }
+        else{
+                if(txt2.value==""){
+                    alert("The second number is missing")
+                    txt2.focus()
+                }else{
+                    txt3.value=parseInt(txt1.value)*parseInt(txt2.value);
+                }
+        }
+    }
+    function Division(){
+        if(txt1.value==""){
+            alert("The first number is missing")
+            txt1.focus()
+        }
+        else{
+                if(txt2.value==""){
+                    alert("The second number is missing")
+                    txt2.focus()
+                }else{
+                    txt3.value=parseInt(txt1.value)/parseInt(txt2.value);
+                }
+        }
+    }
+</script>
+First Number: <input id="txt1" type="text">
+<br>
+Second Number: <input id="txt2" type="text">
+<br>
+<input id="btn" type="Button" value="+" onClick="Addition()">  <input id="btn" type="Button" value="-" onClick="Subtraction()"> <input id="btn" type="Button" value="x" onClick="Multiplication()"> <input id="btn" type="Button" value="/" onClick="Division()">
+<br>
+Result: <input id="txt3" type="text">
+<br>
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <script>
+        function checkData(){
+            let Answer=true
+            if (Name.value==""){
+                NameErr.style.visibility="visible"
+                Answer=false
+            }else{
+                NameErr.style.visibility="hidden"
+            }
+            if (Address.value==""){
+                AddressErr.style.visibility="visible"
+                Answer=false
+            }else{
+                AddressErr.style.visibility="hidden"
+            }
+            if (PCode.value==""){
+                PCodeErr.style.visibility="visible"
+                Answer=false
+            }else{
+                PCodeErr.style.visibility="hidden"
+            }
+            return Answer
+        }
+    </script>
+    <form action="https://www.nationwide.co.uk" onSubmit="return checkData()">
+        Enter your name: <input type="text" id="Name"><span id="NameErr" style="color:red;visibility:hidden"> The name is missing </span><br>
+        Enter your address: <input type="text" id="Address"><span id="AddressErr" style="color:red;visibility:hidden"> The address is missing </span><br>
+        Enter your post code: <input type="text" id="PCode"><span id="PCodeErr" style="color:red;visibility:hidden"> The post code is missing </span><br>
+        <input type="submit" value="OK">
+    </form>
+</html>

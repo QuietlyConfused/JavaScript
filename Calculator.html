@@ -1,0 +1,60 @@
+<html>
+<script>
+    let First=0;
+    let Operator="";
+    function Digits(digit){
+        scrn.value+=digit;
+    }
+    function ScreenClear(){
+        scrn.value="";
+    }
+    function Operations(opt){
+        First=parseInt(scrn.value);
+        Operator=opt;
+        ScreenClear();
+    }
+    function Result(){
+        if(Operator=="+"){
+            scrn.value=First+parseInt(scrn.value)
+        }
+        if(Operator=="-"){
+            scrn.value=First-parseInt(scrn.value)
+        }
+        if(Operator=="x"){
+            scrn.value=First*parseInt(scrn.value)
+        }
+        if(Operator=="/"){
+            scrn.value=First/parseInt(scrn.value)
+        }
+    }
+</script>
+<table border="1" bgcolor="cyan">
+    <tr>
+        <td colspan='4'> <input type="text" id='scrn'></td>
+    </tr>
+    <tr>
+        <td><input type="button" id='n7' value="7" onClick="Digits('7')"></td>
+        <td><input type="button" id='n8' value="8" onClick="Digits('8')"></td>
+        <td><input type="button" id='n9' value="9" onClick="Digits('9')"></td>
+        <td><input type="button" id='bDivide' value="/" onClick="Operations('/')"></td>
+    </tr>
+    <tr>
+        <td><input type="button" id='n4' value="4" onClick="Digits('4')"></td>
+        <td><input type="button" id='n5' value="5" onClick="Digits('5')"></td>
+        <td><input type="button" id='n6' value="6" onClick="Digits('6')"></td>
+        <td><input type="button" id='bTimes' value="x" onClick="Operations('x')"></td>
+    </tr>
+    <tr>
+        <td><input type="button" id='n1' value="1" onClick="Digits('1')"></td>
+        <td><input type="button" id='n2' value="2" onClick="Digits('2')"></td>
+        <td><input type="button" id='n3' value="3" onClick="Digits('3')"></td>
+        <td><input type="button" id='bMinus' value="-" onClick="Operations('-')"></td>
+    </tr>
+    <tr>
+        <td><input type="button" id='bClear' value="C" onClick="ScreenClear()"></td>
+        <td><input type="button" id='n0' value="0" onClick="Digits('0')"></td>
+        <td><input type="button" id='nEquals' value="=" onClick="Result()"></td>
+        <td><input type="button" id='bPlus' value="+" onClick="Operations('+')"></td>
+    </tr>
+</table>
+</html>

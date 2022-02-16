@@ -1,0 +1,20 @@
+<html>
+    <script>
+        function checkData(){
+            if (Name.value==""){
+                alert("Please enter your name")
+                return false
+            }else{
+                if (Address.value==""){
+                    alert("Please enter your address")
+                    return false
+                }
+            }
+        }
+    </script>
+    <form action="https://www.nationwide.co.uk" onSubmit="return checkData()">
+        Enter your name:<input type="text" id="Name"><br>
+        Enter your address:<input type="text" id="Address"><br>
+        <input type="submit" value="OK">
+    </form>
+</html>
